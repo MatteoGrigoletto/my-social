@@ -1,5 +1,6 @@
 import React from "react";
 import classStyle from "./Login.module.scss";
+import { Link } from "react-router-dom";
 
 function Login() {
   return (
@@ -16,7 +17,9 @@ function Login() {
             ipsa, libero ea reiciendis.
           </p>
           <span>Non hai un'account?</span>
-          <button>Registrati</button>
+          <Link to="/register">
+            <button>Registrati</button>
+          </Link>
         </div>
         <div className={classStyle.right}>
           <h1>Accedi</h1>
