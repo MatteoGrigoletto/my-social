@@ -17,6 +17,7 @@ $themes: (
   ),
 );
 
+// funzione per la gestione del css una volta cambiato il bg
 @mixin themify($themes) {
   @each $theme, $map in $themes {
     .theme-#{$theme} & {
