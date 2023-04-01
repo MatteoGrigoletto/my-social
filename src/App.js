@@ -5,15 +5,29 @@ import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 import Home from "./pages/home/Home";
 import Profile from "./pages/profile/Profile";
+import { Navigate } from "react-router-dom";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 function App() {
+  // protezione della rotta
+  const currentUser = true;
+
+  const ProtectedRoute = ({ children }) => {
+    if (!currentUser) {
+      return <Navigate to="/login" />;
+    }
+    return children;
+  };
+
+  // componente Outlet per la gestione dei componenti figli
   const Layout = () => {
     return (
       <div>
         <NavBar />
         <div style={{ display: "flex" }}>
           <LeftBar />
-          <Outlet />
+          <div style={{ flex: 6 }}>
+            <Outlet />
+          </div>
           <RightBar />
         </div>
       </div>
@@ -23,7 +37,11 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Layout />,
+      element: (
+        <ProtectedRoute>
+          <Layout />
+        </ProtectedRoute>
+      ),
       children: [
         {
           path: "/",

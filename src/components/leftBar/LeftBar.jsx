@@ -1,8 +1,98 @@
 import React from "react";
+
 import classStyle from "./LeftBar.module.scss";
 
+import Me from "../../assets/me.JPG";
+import Friends from "../../assets/1.png";
+import Groups from "../../assets/2.png";
+import Market from "../../assets/3.png";
+import Watch from "../../assets/4.png";
+import Memories from "../../assets/5.png";
+import Events from "../../assets/6.png";
+import Gaming from "../../assets/7.png";
+import Gallery from "../../assets/8.png";
+import Videos from "../../assets/9.png";
+import Messages from "../../assets/10.png";
+import Tutorials from "../../assets/11.png";
+import Courses from "../../assets/12.png";
+import Fund from "../../assets/13.png";
+
 function LeftBar() {
-  return <div className={classStyle}>LeftBar</div>;
+  return (
+    <div className={classStyle.leftBar}>
+      <div className={classStyle.container}>
+        {/* first menu */}
+        <div className={classStyle.menu}>
+          <div className={classStyle.user}>
+            <img src={Me} alt="" />
+            <span>Matteo Grigoletto</span>
+          </div>
+          <div className={classStyle.item}>
+            <img src={Friends} alt="" />
+            <span>Amici</span>
+          </div>
+          <div className={classStyle.item}>
+            <img src={Groups} alt="" />
+            <span>Gruppi</span>
+          </div>
+          <div className={classStyle.item}>
+            <img src={Market} alt="" />
+            <span>Negozio</span>
+          </div>
+          <div className={classStyle.item}>
+            <img src={Watch} alt="" />
+            <span>Guarda</span>
+          </div>
+          <div className={classStyle.item}>
+            <img src={Memories} alt="" />
+            <span>Ricordi</span>
+          </div>
+        </div>
+        <hr />
+        {/* second menu */}
+        <div className={classStyle.menu}>
+          <span>Programmi</span>
+          <div className={classStyle.item}>
+            <img src={Events} alt="" />
+            <span>Eventi</span>
+          </div>
+          <div className={classStyle.item}>
+            <img src={Gaming} alt="" />
+            <span>Giochi</span>
+          </div>
+          <div className={classStyle.item}>
+            <img src={Gallery} alt="" />
+            <span>Galleria</span>
+          </div>
+          <div className={classStyle.item}>
+            <img src={Videos} alt="" />
+            <span>Video</span>
+          </div>
+          <div className={classStyle.item}>
+            <img src={Messages} alt="" />
+            <span>Messaggi</span>
+          </div>
+        </div>
+        <hr />
+        {/* third menu */}
+        <div className={classStyle.menu}>
+          <span>Altro</span>
+          <div className={classStyle.item}>
+            <img src={Fund} alt="" />
+            <span>Fondatori</span>
+          </div>
+          <div className={classStyle.item}>
+            <img src={Tutorials} alt="" />
+            <span>Tutorial</span>
+          </div>
+          <div className={classStyle.item}>
+            <img src={Courses} alt="" />
+            <span>Corsi</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default LeftBar;
