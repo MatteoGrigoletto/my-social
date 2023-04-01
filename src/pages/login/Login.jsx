@@ -1,12 +1,12 @@
 import React from "react";
-import classStyle from "./Login.module.scss";
+import "./Login.scss";
 import { Link } from "react-router-dom";
 
 function Login() {
   return (
-    <div className={classStyle.login}>
-      <div className={classStyle.card}>
-        <div className={classStyle.left}>
+    <div className="login">
+      <div className="card">
+        <div className="left">
           <h1>
             New <br /> Social
           </h1>
@@ -21,7 +21,7 @@ function Login() {
             <button>Registrati</button>
           </Link>
         </div>
-        <div className={classStyle.right}>
+        <div className="right">
           <h1>Accedi</h1>
           <form action="">
             <input type="text" placeholder="Inserisci il tuo nome" />

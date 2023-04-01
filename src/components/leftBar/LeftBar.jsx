@@ -1,6 +1,6 @@
 import React from "react";
 
-import classStyle from "./LeftBar.module.scss";
+import "./LeftBar.scss";
 
 import Me from "../../assets/me.JPG";
 import Friends from "../../assets/1.png";
@@ -19,73 +19,73 @@ import Fund from "../../assets/13.png";
 
 function LeftBar() {
   return (
-    <div className={classStyle.leftBar}>
-      <div className={classStyle.container}>
+    <div className="leftBar">
+      <div className="container">
         {/* first menu */}
-        <div className={classStyle.menu}>
-          <div className={classStyle.user}>
+        <div className="menu">
+          <div className="user">
             <img src={Me} alt="" />
             <span>Matteo Grigoletto</span>
           </div>
-          <div className={classStyle.item}>
+          <div className="item">
             <img src={Friends} alt="" />
             <span>Amici</span>
           </div>
-          <div className={classStyle.item}>
+          <div className="item">
             <img src={Groups} alt="" />
             <span>Gruppi</span>
           </div>
-          <div className={classStyle.item}>
+          <div className="item">
             <img src={Market} alt="" />
             <span>Negozio</span>
           </div>
-          <div className={classStyle.item}>
+          <div className="item">
             <img src={Watch} alt="" />
             <span>Guarda</span>
           </div>
-          <div className={classStyle.item}>
+          <div className="item">
             <img src={Memories} alt="" />
             <span>Ricordi</span>
           </div>
         </div>
         <hr />
         {/* second menu */}
-        <div className={classStyle.menu}>
+        <div className="menu">
           <span>Programmi</span>
-          <div className={classStyle.item}>
+          <div className="item">
             <img src={Events} alt="" />
             <span>Eventi</span>
           </div>
-          <div className={classStyle.item}>
+          <div className="item">
             <img src={Gaming} alt="" />
             <span>Giochi</span>
           </div>
-          <div className={classStyle.item}>
+          <div className="item">
             <img src={Gallery} alt="" />
             <span>Galleria</span>
           </div>
-          <div className={classStyle.item}>
+          <div className="item">
             <img src={Videos} alt="" />
             <span>Video</span>
           </div>
-          <div className={classStyle.item}>
+          <div className="item">
             <img src={Messages} alt="" />
             <span>Messaggi</span>
           </div>
         </div>
         <hr />
         {/* third menu */}
-        <div className={classStyle.menu}>
+        <div className="menu">
           <span>Altro</span>
-          <div className={classStyle.item}>
+          <div className="item">
             <img src={Fund} alt="" />
             <span>Fondatori</span>
           </div>
-          <div className={classStyle.item}>
+          <div className="item">
             <img src={Tutorials} alt="" />
             <span>Tutorial</span>
           </div>
-          <div className={classStyle.item}>
+          <div className="item">
             <img src={Courses} alt="" />
             <span>Corsi</span>
           </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import classStyle from "./NavBar.module.scss";
+import "./NavBar.scss";
 
 import { Link } from "react-router-dom";
 import image from "../../assets/me.JPG";
@@ -14,24 +14,24 @@ import NotificationsActiveOutlinedIcon from "@mui/icons-material/NotificationsAc
 
 function NavBar() {
   return (
-    <div className={classStyle.navBar}>
-      <div className={classStyle.left}>
+    <div className="navBar">
+      <div className="left">
         <Link to="/" style={{ textDecoration: "none" }}>
           <span>New Social</span>
         </Link>
         <HomeOutlinedIcon />
         <DarkModeOutlinedIcon />
         <AppsOutlinedIcon />
-        <div className={classStyle.search}>
+        <div className="search">
           <SearchOutlinedIcon />
           <input type="text" placeholder="Cerca" />
         </div>
       </div>
-      <div className={classStyle.right}>
+      <div className="right">
         <AccountCircleOutlinedIcon />
         <EmailOutlinedIcon />
         <NotificationsActiveOutlinedIcon />
-        <div className={classStyle.user}>
+        <div className="user">
           <img src={image} alt="" />
           <span>Matteo Grigoletto</span>
         </div>

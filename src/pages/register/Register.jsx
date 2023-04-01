@@ -1,13 +1,13 @@
 import React from "react";
-import classStyle from "./Register.module.scss";
+import "./Register.scss";
 
 import { Link } from "react-router-dom";
 
 function Register() {
   return (
-    <div className={classStyle.register}>
-      <div className={classStyle.card}>
-        <div className={classStyle.left}>
+    <div className="register">
+      <div className="card">
+        <div className="left">
           <h1>
             New <br /> World
           </h1>
@@ -22,7 +22,7 @@ function Register() {
             <button>Accedi</button>
           </Link>
         </div>
-        <div className={classStyle.right}>
+        <div className="right">
           <h1>Registrati</h1>
           <form action="">
             <input type="text" placeholder="Inserisci il tuo nome" />

@@ -1,39 +1,39 @@
 import React from "react";
-import classStyle from "./RightBar.module.scss";
+import "./RightBar.scss";
 
 import Me from "../../assets/me.JPG";
 
 function RightBar() {
   return (
-    <div className={classStyle.rightBar}>
-      <div className={classStyle.container}>
-        <div className={classStyle.item}>
+    <div className="rightBar">
+      <div className="container">
+        <div className="item">
           <span>Suggeriti per te</span>
-          <div className={classStyle.user}>
-            <div className={classStyle.userInfo}>
+          <div className="user">
+            <div className="userInfo">
               <img src={Me} alt="" />
               <span>Matteo Grigoletto</span>
             </div>
-            <div className={classStyle.buttons}>
+            <div className="buttons">
               <button>Segui</button>
               <button>Non seguire</button>
             </div>
           </div>
-          <div className={classStyle.user}>
-            <div className={classStyle.userInfo}>
+          <div className="user">
+            <div className="userInfo">
               <img src={Me} alt="" />
               <span>Matteo Grigoletto</span>
             </div>
-            <div className={classStyle.buttons}>
+            <div className="buttons">
               <button>Segui</button>
               <button>Non seguire</button>
             </div>
           </div>
         </div>
-        <div className={classStyle.item}>
+        <div className="item">
           <span>Ultime attivita'</span>
-          <div className={classStyle.user}>
-            <div className={classStyle.userInfo}>
+          <div className="user">
+            <div className="userInfo">
               <img src={Me} alt="" />
               <p>
                 <span>Matteo Grigoletto</span> ciao
@@ -41,8 +41,8 @@ function RightBar() {
             </div>
             <span>1 minute ago</span>
           </div>
-          <div className={classStyle.user}>
-            <div className={classStyle.userInfo}>
+          <div className="user">
+            <div className="userInfo">
               <img src={Me} alt="" />
               <p>
                 <span>Matteo Grigoletto</span> ciao
@@ -50,8 +50,8 @@ function RightBar() {
             </div>
             <span>1 minute ago</span>
           </div>
-          <div className={classStyle.user}>
-            <div className={classStyle.userInfo}>
+          <div className="user">
+            <div className="userInfo">
               <img src={Me} alt="" />
               <p>
                 <span>Matteo Grigoletto</span> ciao
@@ -59,8 +59,8 @@ function RightBar() {
             </div>
             <span>1 minute ago</span>
           </div>
-          <div className={classStyle.user}>
-            <div className={classStyle.userInfo}>
+          <div className="user">
+            <div className="userInfo">
               <img src={Me} alt="" />
               <p>
                 <span>Matteo Grigoletto</span> ciao
@@ -69,26 +69,26 @@ function RightBar() {
             <span>1 minute ago</span>
           </div>
         </div>
-        <div className={classStyle.item}>
+        <div className="item">
           <span>Amici online</span>
-          <div className={classStyle.user}>
-            <div className={classStyle.userInfo}>
+          <div className="user">
+            <div className="userInfo">
               <img src={Me} alt="" />
-              <div className={classStyle.online} />
+              <div className="online" />
               <span>Matteo Grigoletto</span>
             </div>
           </div>
-          <div className={classStyle.user}>
-            <div className={classStyle.userInfo}>
+          <div className="user">
+            <div className="userInfo">
               <img src={Me} alt="" />
-              <div className={classStyle.online} />
+              <div className="online" />
               <span>Matteo Grigoletto</span>
             </div>
           </div>
-          <div className={classStyle.user}>
-            <div className={classStyle.userInfo}>
+          <div className="user">
+            <div className="userInfo">
               <img src={Me} alt="" />
-              <div className={classStyle.online} />
+              <div className="online" />
               <span>Matteo Grigoletto</span>
             </div>
           </div>

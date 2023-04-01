@@ -21,7 +21,7 @@ function App() {
   // componente Outlet per la gestione dei componenti figli
   const Layout = () => {
     return (
-      <div>
+      <div className="theme-dark">
         <NavBar />
         <div style={{ display: "flex" }}>
           <LeftBar />
