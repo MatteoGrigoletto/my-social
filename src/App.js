@@ -9,13 +9,15 @@ import { Navigate } from "react-router-dom";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
+import { AuthContext } from "./context/authContext";
 function App() {
-  // valori passati tramite provider per gestione bg app
+  // valori passati tramite provider per gestione bg app e autenticazione
   const { darkMode } = useContext(DarkModeContext);
   console.log(darkMode);
+  const { currentUser } = useContext(AuthContext);
 
   // protezione della rotta
-  const currentUser = true;
+  // const currentUser = true;
 
   // componente Outlet per la gestione dei componenti figli
   const Layout = () => {

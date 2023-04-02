@@ -6,15 +6,19 @@ import image from "../../assets/me.JPG";
 // icon
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
+import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined";
 import AppsOutlinedIcon from "@mui/icons-material/AppsOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import NotificationsActiveOutlinedIcon from "@mui/icons-material/NotificationsActiveOutlined";
 import { DarkModeContext } from "../../context/darkModeContext";
+import { AuthContext } from "../../context/authContext";
 
 function NavBar() {
-  const { toggle } = useContext(DarkModeContext);
+  const { toggle, darkMode } = useContext(DarkModeContext);
+
+  const { currentUser } = useContext(AuthContext);
 
   return (
     <div className="navBar">
@@ -23,7 +27,11 @@ function NavBar() {
           <span>New Social</span>
         </Link>
         <HomeOutlinedIcon />
-        <DarkModeOutlinedIcon onClick={toggle} />
+        {darkMode ? (
+          <DarkModeOutlinedIcon onClick={toggle} />
+        ) : (
+          <WbSunnyOutlinedIcon onClick={toggle} />
+        )}
         <AppsOutlinedIcon />
         <div className="search">
           <SearchOutlinedIcon />
@@ -35,8 +43,8 @@ function NavBar() {
         <EmailOutlinedIcon />
         <NotificationsActiveOutlinedIcon />
         <div className="user">
-          <img src={image} alt="" />
-          <span>Matteo Grigoletto</span>
+          <img src={currentUser.profilePic} alt="" />
+          <span>{currentUser.name}</span>
         </div>
       </div>
     </div>
