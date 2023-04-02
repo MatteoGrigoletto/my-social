@@ -1,3 +1,4 @@
+@import "../../style.scss";
 .register {
   height: 100vh;
   background-color: rgba(112, 230, 191, 0.774);
@@ -12,6 +13,13 @@
     border-radius: 10px;
     overflow: hidden;
     min-height: 600px;
+
+    @include mobile {
+      width: 95%;
+    }
+    @include tablet {
+      flex-direction: column;
+    }
     .left {
       flex: 1;
       background: linear-gradient(
