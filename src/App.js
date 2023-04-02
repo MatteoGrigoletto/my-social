@@ -7,21 +7,20 @@ import Home from "./pages/home/Home";
 import Profile from "./pages/profile/Profile";
 import { Navigate } from "react-router-dom";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import { useContext } from "react";
+import { DarkModeContext } from "./context/darkModeContext";
 function App() {
+  // valori passati tramite provider per gestione bg app
+  const { darkMode } = useContext(DarkModeContext);
+  console.log(darkMode);
+
   // protezione della rotta
   const currentUser = true;
-
-  const ProtectedRoute = ({ children }) => {
-    if (!currentUser) {
-      return <Navigate to="/login" />;
-    }
-    return children;
-  };
 
   // componente Outlet per la gestione dei componenti figli
   const Layout = () => {
     return (
-      <div className="theme-dark">
+      <div className={`theme-${darkMode ? "dark" : "light"}`}>
         <NavBar />
         <div style={{ display: "flex" }}>
           <LeftBar />
@@ -34,6 +33,12 @@ function App() {
     );
   };
 
+  const ProtectedRoute = ({ children }) => {
+    if (!currentUser) {
+      return <Navigate to="/login" />;
+    }
+    return children;
+  };
   const router = createBrowserRouter([
     {
       path: "/",
